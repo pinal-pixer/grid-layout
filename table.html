@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Comparison Table</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .table-container {
+        width: 100%;
+        max-width: 500px;
+        padding: 20px;
+      }
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+      .comparison-table th,
+      .comparison-table td {
+        padding: 12px 20px;
+        text-align: left;
+        border: 1px solid #ddd;
+      }
+      .comparison-table th {
+        font-weight: bold;
+        background-color: #f4f4f4;
+      }
+      .comparison-table td {
+        vertical-align: middle;
+      }
+      .comparison-table td span {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+      }
+      .green-dot {
+        background-color: green;
+      }
+      .red-dot {
+        background-color: red;
+      }
+      @media (max-width: 768px) {
+        .comparison-table {
+          display: block;
+          width: 100%;
+        }
+        .comparison-table tr {
+          display: block;
+          width: 100%;
+        }
+        .comparison-table td {
+          display: block;
+          padding: 8px 12px;
+          width: 100%;
+          box-sizing: border-box;
+        }
+        .comparison-table th {
+          display: none;
+        }
+        .comparison-table td:nth-child(2),
+        .comparison-table td:nth-child(3) {
+          display: table-cell;
+          justify-content: space-between;
+          flex: 1;
+          box-sizing: border-box;
+          width: unset;
+        }
+        .comparison-table td:nth-child(2) span,
+        .comparison-table td:nth-child(3) span {
+          white-space: nowrap;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="table-container">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Copilot</th>
+            <th>Suitdash</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              Modern & minimalist design. Easily disable features you don’t need
+              and enable them when ready.
+            </td>
+            <td><span class="green-dot"></span></td>
+            <td><span class="red-dot"></span></td>
+          </tr>
+          <tr>
+            <td>
+              Mobile-first experiences that make usage on the go convenient.
+            </td>
+            <td><span class="green-dot"></span></td>
+            <td><span class="green-dot"></span></td>
+          </tr>
+          <tr>
+            <td>
+              When messaging clients, clients can simply reply to email
+              notifications with their response.
+            </td>
+            <td><span class="green-dot"></span></td>
+            <td><span class="red-dot"></span></td>
+          </tr>
+          <tr>
+            <td>
+              Quickly find solutions to common problems and access guides for
+              troubleshooting directly within the dashboard.
+            </td>
+            <td><span class="green-dot"></span></td>
+            <td><span class="green-dot"></span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
